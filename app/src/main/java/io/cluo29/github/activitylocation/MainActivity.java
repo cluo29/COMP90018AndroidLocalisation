@@ -56,13 +56,15 @@ public class MainActivity extends AppCompatActivity {
 
         // localisation uses a lot of power, consider your task cycle
 
-        String provider = lm.getBestProvider(criteria, true);
+        //String provider = lm.getBestProvider(criteria, true);
 
         // can also use a specific provider
-//        if (gps_enabled)
-//            gps_loc = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-//        if (network_enabled)
-//            net_loc = lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
+
+        String provider = LocationManager.NETWORK_PROVIDER;
+
+        // gps signal often naive
+        //String provider = LocationManager.GPS_PROVIDER;
+
 
         // must call this before using getLastKnownLocation
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PERMISSION_GRANTED
@@ -84,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
         } else {
             Log.d("haha","no available location");
+            startLocalisation();
         }
 
     }
