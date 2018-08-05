@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         // can also use a specific provider
 
+        // cellular network can localise me
         String provider = LocationManager.NETWORK_PROVIDER;
 
         // gps signal often naive
