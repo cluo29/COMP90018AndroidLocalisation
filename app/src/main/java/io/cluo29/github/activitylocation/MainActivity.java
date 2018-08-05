@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         criteria.setCostAllowed(true);
         criteria.setPowerRequirement(Criteria.POWER_LOW);
 
+        // localisation uses a lot of power, consider your task cycle
+
         String provider = lm.getBestProvider(criteria, true);
 
         // can also use a specific provider
@@ -76,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             double longitude = location.getLongitude();
 
             Log.d("haha","latitude：" + latitude + "\nlongitude" + longitude);
-            
+
             // if we are in melbourne, we get negative latitude.
             // it means south part of the earth.
 
