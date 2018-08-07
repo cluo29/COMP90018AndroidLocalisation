@@ -84,6 +84,9 @@ public class MainActivity extends AppCompatActivity{
 
         if (gps_enabled) {
             Log.d("haha", " gps_enabled");
+
+            //requestLocationUpdates(String provider, long minTime, float minDistance, LocationListener listener)
+
             lm.requestLocationUpdates(providerGPS, 0, 0, locationListener);
             gps_loc = lm.getLastKnownLocation(providerGPS);
         }
@@ -135,9 +138,6 @@ public class MainActivity extends AppCompatActivity{
 
             //startLocalisation();
         }
-
-
-        //requestLocationUpdates(String provider, long minTime, float minDistance, LocationListener listener)
 
 
     }
