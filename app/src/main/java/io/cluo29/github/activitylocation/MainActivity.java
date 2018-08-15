@@ -177,7 +177,7 @@ public class MainActivity extends AppCompatActivity{
 
 
 
-
+        // Location hardware setting enabled?
         boolean GPSEnabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
 
         String[] permissionsArray = {
